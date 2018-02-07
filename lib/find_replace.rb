@@ -4,16 +4,7 @@ class Phrase
   end
 
   def find_replace(find, replace)
-    words = @input.split(' ')
-    replaced_words = []
-    words.each do |word|
-      if (word.include? find)
-        replaced_words.push(word.sub(find, replace))
-      else
-        replaced_words.push(word)
-      end
-    end
-    return replaced_words.join(' ')
+    result = @input.gsub(find, replace)
   end
 end
 
