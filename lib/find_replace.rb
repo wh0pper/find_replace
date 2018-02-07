@@ -7,8 +7,8 @@ class Phrase
     words = @input.split(' ')
     replaced_words = []
     words.each do |word|
-      if (word == find)
-        replaced_words.push(replace)
+      if (word.include? find)
+        replaced_words.push(word.sub(find, replace))
       else
         replaced_words.push(word)
       end
